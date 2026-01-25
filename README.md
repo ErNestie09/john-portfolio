@@ -1,6 +1,6 @@
 # John Ernest Manansala – Portfolio
 
-Web Designer & Cybersecurity Curriculum Developer
+Web Designer & Learning Content Developer
 
 ## Projects
 - Company Website – UI/UX, responsive, branding
