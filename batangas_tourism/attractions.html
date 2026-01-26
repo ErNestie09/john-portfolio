@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Attractions - Batangas Tourism</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+<body class="destination-page">
+
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="logo">Batangas Tourism</div>
+    <div class="nav-links">
+        <a href="index.html" class="back-btn">&larr; Back</a>
+    </div>
+</nav>
+
+<!-- FILTER BAR -->
+<div class="filter-container">
+    <button class="filter-btn active" onclick="filterCards('All', event)">All</button>
+    <button class="filter-btn" onclick="filterCards('Nature', event)">Nature</button>
+    <button class="filter-btn" onclick="filterCards('Heritage', event)">Heritage</button>
+    <button class="filter-btn" onclick="filterCards('Leisure', event)">Leisure</button>
+    <button class="filter-btn" onclick="filterCards('Food & Dining', event)">Food & Dining</button>
+</div>
+
+<!-- MAIN GRID -->
+<main class="grid-container">
+
+    <!-- Taal Volcano -->
+    <a href="https://maps.google.com/?q=Taal+Volcano" target="_blank" class="card-link">
+        <div class="card" data-categories="Nature">
+            <div class="card-image">
+                <img src="static/images/taal.jpg" alt="Taal Volcano">
+                <span class="category-label nature">Nature</span>
+            </div>
+            <div class="card-content">
+                <h2>Taal Volcano</h2>
+                <p>One of the world’s smallest active volcanoes, located in Taal Lake.</p>
+            </div>
+        </div>
+    </a>
+
+    <!-- Basilica -->
+    <a href="https://maps.google.com/?q=Taal+Basilica" target="_blank" class="card-link">
+        <div class="card" data-categories="Heritage">
+            <div class="card-image">
+                <img src="static/images/basilica.jpg" alt="Taal Basilica">
+                <span class="category-label heritage">Heritage</span>
+            </div>
+            <div class="card-content">
+                <h2>Taal Basilica</h2>
+                <p>The largest Catholic church in Asia, rich in history and architecture.</p>
+            </div>
+        </div>
+    </a>
+
+    <!-- Anilao -->
+    <a href="https://maps.google.com/?q=Anilao+Batangas" target="_blank" class="card-link">
+        <div class="card" data-categories="Leisure,Nature">
+            <div class="card-image">
+                <img src="static/images/anilao.jpg" alt="Anilao">
+                <span class="category-label leisure">Leisure</span>
+                <span class="category-label nature">Nature</span>
+            </div>
+            <div class="card-content">
+                <h2>Anilao</h2>
+                <p>A world-famous diving and snorkeling destination.</p>
+            </div>
+        </div>
+    </a>
+
+</main>
+
+<!-- FILTER SCRIPT -->
+<script>
+function filterCards(category, event) {
+    const buttons = document.querySelectorAll(".filter-btn");
+    buttons.forEach(btn => btn.classList.remove("active"));
+    event.target.classList.add("active");
+
+    const cards = document.querySelectorAll(".card");
+    cards.forEach(card => {
+        const categories = card.dataset.categories.split(",");
+        card.parentElement.style.display =
+            category === "All" || categories.includes(category)
+            ? "block"
+            : "none";
+    });
+}
+</script>
+
+<footer>© 2025 Batangas Tourism</footer>
+
+</body>
+</html>
