@@ -1,410 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Attractions - Batangas Tourism</title>
-    <link rel="stylesheet" href="static/css/style.css">
-</head>
-<body class="destination-page">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Navigation -->
+<title>Attractions - Batangas Tourism</title>
+
+<link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body class="destination-page">
+<div class="page-wrapper">
+
+<header>
 <nav class="navbar">
     <div class="logo">Batangas Tourism</div>
+
     <div class="nav-links">
-        <a href="index.html" class="back-btn">&larr; Back</a>
+        <a href="index.html" class="back-btn">Return</a>
     </div>
 </nav>
+</header>
 
 <!-- FILTER BAR -->
-<div class="filter-container">
-    <button class="filter-btn active" onclick="filterCards('All', event)">All</button>
-    <button class="filter-btn" onclick="filterCards('Nature', event)">Nature</button>
-    <button class="filter-btn" onclick="filterCards('Heritage', event)">Heritage</button>
-    <button class="filter-btn" onclick="filterCards('Leisure', event)">Leisure</button>
-    <button class="filter-btn" onclick="filterCards('Food & Dining', event)">Food & Dining</button>
-</div>
+<section class="filter-container">
+    <button class="filter-btn active" data-filter="all">All</button>
+    <button class="filter-btn" data-filter="nature">Nature</button>
+    <button class="filter-btn" data-filter="heritage">Heritage</button>
+    <button class="filter-btn" data-filter="leisure">Leisure</button>
+    <button class="filter-btn" data-filter="food-&-dining">Food & Dining</button>
+    <button class="filter-btn" data-filter="pasalubong">Pasalubong</button>
+</section>
 
-<!-- MAIN GRID -->
-<main class="grid-container">
-
-<!-- ================= NATURE ================= -->
-
-<a href="https://maps.app.goo.gl/Jq8Xefp7M5UvBRo99" target="_blank" class="card-link">
-<div class="card" data-categories="Nature">
-<div class="card-image">
-<img src="static/images/laiya_beach.jpg" alt="Laiya Beach">
-<span class="category-label nature">Nature</span>
-</div>
-<div class="card-content">
-<h2>Laiya Beach</h2>
-<p>A popular white-sand beach destination in San Juan.</p>
-</div>
-</div>
-</a>
-
-<a href="https://maps.app.goo.gl/WchSg8Bvzz6xK5Zd8" target="_blank" class="card-link">
-<div class="card" data-categories="Nature">
-<div class="card-image">
-<img src="static/images/anilao.jpg" alt="Anilao Batangas">
-<span class="category-label nature">Nature</span>
-</div>
-<div class="card-content">
-<h2>Anilao (Mabini)</h2>
-<p>Diving capital of the Philippines.</p>
-</div>
-</div>
-</a>
-
-<a href="https://maps.app.goo.gl/R4FLJnUGaEgiw2wv8" target="_blank" class="card-link">
-<div class="card" data-categories="Nature">
-<div class="card-image">
-<img src="static/images/fortune_island.jpg" alt="Fortune Island">
-<span class="category-label nature">Nature</span>
-</div>
-<div class="card-content">
-<h2>Fortune Island</h2>
-<p>Greek-style ruins with turquoise waters.</p>
-</div>
-</div>
-</a>
-
-<a href="https://maps.app.goo.gl/jw5voJQrDsR5mX159" target="_blank" class="card-link">
-<div class="card" data-categories="Nature">
-<div class="card-image">
-<img src="static/images/masasa.jpg" alt="Masasa Beach">
-<span class="category-label nature">Nature</span>
-</div>
-<div class="card-content">
-<h2>Masasa Beach</h2>
-<p>Crystal-clear waters in Tingloy.</p>
-</div>
-</div>
-</a>
-
-<a href="https://maps.app.goo.gl/VSziC5FSS3oa8bYA7" target="_blank" class="card-link">
-<div class="card" data-categories="Nature">
-<div class="card-image">
-<img src="static/images/matabungkay.jpg" alt="Matabungkay Beach">
-<span class="category-label nature">Nature</span>
-</div>
-<div class="card-content">
-<h2>Matabungkay Beach</h2>
-<p>Calm waters and floating cottages.</p>
-</div>
-</div>
-</a>
-
-<a href="https://maps.app.goo.gl/9F5VTumMSk7VEAWLA" target="_blank" class="card-link">
-<div class="card" data-categories="Nature">
-<div class="card-image">
-<img src="static/images/mount_maculot.jpg" alt="Mount Maculot">
-<span class="category-label nature">Nature</span>
-</div>
-<div class="card-content">
-<h2>Mount Maculot</h2>
-<p>Famous for “The Rockies” viewpoint.</p>
-</div>
-</div>
-</a>
-
-<a href="https://maps.app.goo.gl/gUAZtT9nJVEkVudRA" target="_blank" class="card-link">
-<div class="card" data-categories="Nature">
-<div class="card-image">
-<img src="static/images/mt_manabu.jpg" alt="Mt. Manabu">
-<span class="category-label nature">Nature</span>
-</div>
-<div class="card-content">
-<h2>Mt. Manabu</h2>
-<p>Beginner-friendly hiking trail.</p>
-</div>
-</div>
-</a>
-
-<a href="https://maps.app.goo.gl/RtdkqtdiR5jstgLJ7" target="_blank" class="card-link">
-<div class="card" data-categories="Nature">
-<div class="card-image">
-<img src="static/images/taal.jpg" alt="Taal Volcano">
-<span class="category-label nature">Nature</span>
-</div>
-<div class="card-content">
-<h2>Taal Volcano</h2>
-<p>Volcano within a lake within a volcano.</p>
-</div>
-</div>
-</a>
-
-<!-- ================= HERITAGE ================= -->
-
-<a href="https://maps.app.goo.gl/aqiq1PxXf3DJ9Y5j8" target="_blank" class="card-link">
-<div class="card" data-categories="Heritage">
-<div class="card-image">
-<img src="static/images/taal_basilica.jpg" alt="Taal Basilica">
-<span class="category-label heritage">Heritage</span>
-</div>
-<div class="card-content">
-<h2>Taal Basilica</h2>
-<p>Largest Catholic church in Asia.</p>
-</div>
-</div>
-</a>
-
-<a href="https://maps.app.goo.gl/ZNoKYByWNefrwzXy9" target="_blank" class="card-link">
-<div class="card" data-categories="Heritage">
-<div class="card-image">
-<img src="static/images/padre_pio.jpg" alt="Padre Pio Shrine">
-<span class="category-label heritage">Heritage</span>
-</div>
-<div class="card-content">
-<h2>Padre Pio Shrine</h2>
-<p>National pilgrimage site.</p>
-</div>
-</div>
-</a>
-
-<a href="https://maps.app.goo.gl/mKwjT3xBwqsYw1pW6" target="_blank" class="card-link">
-<div class="card" data-categories="Heritage">
-<div class="card-image">
-<img src="static/images/chapel_on_the_hill.jpg" alt="Chapel on the Hill">
-<span class="category-label heritage">Heritage</span>
-</div>
-<div class="card-content">
-<h2>Chapel on the Hill</h2>
-<p>Peaceful circular chapel in Nasugbu.</p>
-</div>
-</div>
-</a>
-
-<a href="https://maps.app.goo.gl/rBxUN5Hx8nTHmhMs5" target="_blank" class="card-link">
-<div class="card" data-categories="Heritage">
-<div class="card-image">
-<img src="static/images/simbahang_bato.jpg" alt="Simbahang Bato">
-<span class="category-label heritage">Heritage</span>
-</div>
-<div class="card-content">
-<h2>Simbahang Bato</h2>
-<p>Church carved from rock formations.</p>
-</div>
-</div>
-</a>
-
-<a href="https://maps.app.goo.gl/E1w5eZwFDTV9yB678" target="_blank" class="card-link">
-<div class="card" data-categories="Heritage">
-<div class="card-image">
-<img src="static/images/taal_heritage.jpg" alt="Taal Heritage Town">
-<span class="category-label heritage">Heritage</span>
-</div>
-<div class="card-content">
-<h2>Taal Heritage Town</h2>
-<p>Spanish-era houses and museums.</p>
-</div>
-</div>
-</a>
-
-<!-- ================= LEISURE ================= -->
-
-<a href="https://maps.app.goo.gl/HCeM6epbF8qWon1Q8" target="_blank" class="card-link">
-<div class="card" data-categories="Nature,Leisure">
-<div class="card-image">
-<img src="static/images/stilts.jpg" alt="Stilts Calatagan Beach Resort">
-<span class="category-label nature">Nature</span>
-<span class="category-label leisure">Leisure</span>
-</div>
-<div class="card-content">
-<h2>Stilts Calatagan Beach Resort</h2>
-<p>Maldives-style cottages on stilts in Calatagan.</p>
-</div>
-</div>
-</a>
-
-<a href="https://maps.app.goo.gl/dTxVXFCyWcA3oTTt7" target="_blank" class="card-link">
-<div class="card" data-categories="Nature,Leisure">
-<div class="card-image">
-<img src="static/images/pico_de_loro.jpg" alt="Pico de Loro Cove">
-<span class="category-label nature">Nature</span>
-<span class="category-label leisure">Leisure</span>
-</div>
-<div class="card-content">
-<h2>Pico de Loro Cove</h2>
-<p>Exclusive beachfront community in Nasugbu.</p>
-</div>
-</div>
-</a>
-
-<a href="https://maps.app.goo.gl/C8hxmJxpHWUYsiDt6" target="_blank" class="card-link">
-<div class="card" data-categories="Nature,Leisure">
-<div class="card-image">
-<img src="static/images/batangas_lakelands.jpg" alt="Batangas Lakelands">
-<span class="category-label nature">Nature</span>
-<span class="category-label leisure">Leisure</span>
-</div>
-<div class="card-content">
-<h2>Batangas Lakelands</h2>
-<p>Adventure parks and scenic lake attractions.</p>
-</div>
-</div>
-</a>
-
-<a href="https://maps.app.goo.gl/PKNTXXiecCrSYfk87" target="_blank" class="card-link">
-<div class="card" data-categories="Nature,Leisure">
-<div class="card-image">
-<img src="static/images/wakim_lake.jpg" alt="Wakim Lake & Resort">
-<span class="category-label nature">Nature</span>
-<span class="category-label leisure">Leisure</span>
-</div>
-<div class="card-content">
-<h2>Wakim Lake & Resort</h2>
-<p>Relaxing lake attraction in Talisay.</p>
-</div>
-</div>
-</a>
-
-<a href="https://maps.app.goo.gl/fUiHd7tEGmW7kmpY6" target="_blank" class="card-link">
-<div class="card" data-categories="Leisure">
-<div class="card-image">
-<img src="static/images/la_virginia.jpg" alt="La Virginia Resort">
-<span class="category-label leisure">Leisure</span>
-</div>
-<div class="card-content">
-<h2>La Virginia Resort</h2>
-<p>Theme-inspired resort in Mataas na Kahoy.</p>
-</div>
-</div>
-</a>
-
-<a href="https://maps.app.goo.gl/ZebKn9wm1zxJ1qaAA" target="_blank" class="card-link">
-<div class="card" data-categories="Nature,Leisure">
-<div class="card-image">
-<img src="static/images/acuatico.jpg" alt="Acuatico Beach Resort">
-<span class="category-label nature">Nature</span>
-<span class="category-label leisure">Leisure</span>
-</div>
-<div class="card-content">
-<h2>Acuatico Beach Resort & Hotel</h2>
-<p>Luxury beach resort in Laiya.</p>
-</div>
-</div>
-</a>
-
-<a href="https://maps.app.goo.gl/Hy1RcnkvL3bBKjmk8" target="_blank" class="card-link">
-<div class="card" data-categories="Leisure">
-<div class="card-image">
-<img src="static/images/j_castle.jpg" alt="J Castle Hotel">
-<span class="category-label leisure">Leisure</span>
-</div>
-<div class="card-content">
-<h2>J Castle</h2>
-<p>Castle-themed hotel in Tanauan.</p>
-</div>
-</div>
-</a>
-
-<a href="https://maps.app.goo.gl/ZSYGz4UTgSeQbrHKA" target="_blank" class="card-link">
-<div class="card" data-categories="Nature,Leisure">
-<div class="card-image">
-<img src="static/images/aiyanar.jpg" alt="Aiyanar Beach and Dive Resort">
-<span class="category-label nature">Nature</span>
-<span class="category-label leisure">Leisure</span>
-</div>
-<div class="card-content">
-<h2>Aiyanar Beach and Dive Resort</h2>
-<p>Diving resort with scenic coastal views.</p>
-</div>
-</div>
-</a>
-
-<!-- ================= FOOD ================= -->
-
-<a href="https://maps.app.goo.gl/tqgaT1H5WioKvjT38" target="_blank" class="card-link">
-<div class="card" data-categories="Food & Dining">
-<div class="card-image">
-<img src="static/images/taggo.jpg" alt="TAGGO Grill">
-<span class="category-label food">Food & Dining</span>
-</div>
-<div class="card-content">
-<h2>TAGGO Grill & Resto</h2>
-<p>Filipino-style grill dining.</p>
-</div>
-</div>
-</a>
-
-<a href="https://maps.app.goo.gl/Gap6CJ26tzjSSkFy7" target="_blank" class="card-link">
-<div class="card" data-categories="Food & Dining">
-<div class="card-image">
-<img src="static/images/cucina_de_jardin.jpg" alt="Cucina de Jardin">
-<span class="category-label food">Food & Dining</span>
-</div>
-<div class="card-content">
-<h2>Cucina de Jardin</h2>
-<p>Garden-style restaurant in Taal.</p>
-</div>
-</div>
-</a>
-
-<a href="https://maps.app.goo.gl/TjunTnHBJGQNq31DA" target="_blank" class="card-link">
-<div class="card" data-categories="Food & Dining">
-<div class="card-image">
-<img src="static/images/prism.jpg" alt="Prism Cafe">
-<span class="category-label food">Food & Dining</span>
-</div>
-<div class="card-content">
-<h2>Prism Restaurant Cafe</h2>
-<p>Overlooking Taal Lake.</p>
-</div>
-</div>
-</a>
-
-<!-- ================= PASALUBONG ================= -->
-
-<a href="https://maps.app.goo.gl/Tg3FT6nQGAMPiu4g9" target="_blank" class="card-link">
-<div class="card" data-categories="Pasalubong">
-<div class="card-image">
-<img src="static/images/batangas_coffee.jpg" alt="Batangas Coffee">
-<span class="category-label pasalubong">Pasalubong</span>
-</div>
-<div class="card-content">
-<h2>Batangas Coffee & Pasalubong Center</h2>
-<p>Local coffee beans and delicacies.</p>
-</div>
-</div>
-</a>
-
-<a href="https://maps.app.goo.gl/sg5p8aB32TABuEuu5" target="_blank" class="card-link">
-<div class="card" data-categories="Pasalubong">
-<div class="card-image">
-<img src="static/images/babes_buko_pie.jpg" alt="Babe’s Buko Pie">
-<span class="category-label pasalubong">Pasalubong</span>
-</div>
-<div class="card-content">
-<h2>Babe’s Buko Pie</h2>
-<p>Famous Batangas delicacy.</p>
-</div>
-</div>
-</a>
-</a>
-
+<!-- GRID -->
+<main class="grid-container" id="attractionsGrid">
+<!-- Cards will be auto-generated here -->
 </main>
 
-<!-- FILTER SCRIPT -->
-<script>
-function filterCards(category, event) {
-    const buttons = document.querySelectorAll(".filter-btn");
-    buttons.forEach(btn => btn.classList.remove("active"));
-    event.target.classList.add("active");
+</div>
 
-    const cards = document.querySelectorAll(".card");
-    cards.forEach(card => {
-        const categories = card.dataset.categories.split(",");
-        card.parentElement.style.display =
-            category === "All" || categories.includes(category)
-            ? "block"
-            : "none";
+<!-- ATTRACTIONS DATA + CARD GENERATOR -->
+<script>
+const attractionsList = [
+    {name:"Laiya Beach",description:"A popular white-sand beach destination in San Juan.",image:"laiya_beach.jpg",categories:["Nature"],gmap_link:"https://maps.app.goo.gl/Jq8Xefp7M5UvBRo99?g_st=ipc"},
+    {name:"Anilao (Mabini)",description:"Diving capital of the Philippines located in Mabini/Bauan.",image:"anilao.jpg",categories:["Nature"],gmap_link:"https://maps.app.goo.gl/WchSg8Bvzz6xK5Zd8"},
+    {name:"Fortune Island",description:"Island with Greek-style ruins and turquoise waters.",image:"fortune_island.jpg",categories:["Nature"],gmap_link:"https://maps.app.goo.gl/R4FLJnUGaEgiw2wv8"},
+    {name:"Masasa Beach",description:"Crystal-clear waters and white sands in Tingloy.",image:"masasa.jpg",categories:["Nature"],gmap_link:"https://maps.app.goo.gl/jw5voJQrDsR5mX159"},
+    {name:"Matabungkay Beach",description:"Calm, shallow waters and floating cottages in Lian.",image:"matabungkay.jpg",categories:["Nature"],gmap_link:"https://maps.app.goo.gl/VSziC5FSS3oa8bYA7?g_st=ipc"},
+    {name:"Mount Maculot",description:"Famous for The Rockies view deck in Cuenca.",image:"mount_maculot.jpg",categories:["Nature"],gmap_link:"https://maps.app.goo.gl/9F5VTumMSk7VEAWLA?g_st=ipc"},
+    {name:"Mt. Manabu",description:"Beginner-friendly hiking trail in Sto. Tomas.",image:"mt_manabu.jpg",categories:["Nature"],gmap_link:"https://maps.app.goo.gl/gUAZtT9nJVEkVudRA"},
+    {name:"Taal Lake / Taal Volcano",description:"Unique volcano within a lake within a volcano.",image:"taal.jpg",categories:["Nature"],gmap_link:"https://maps.app.goo.gl/RtdkqtdiR5jstgLJ7"},
+    {name:"Taal Basilica",description:"Largest Catholic church in Asia.",image:"taal_basilica.jpg",categories:["Heritage"],gmap_link:"https://maps.app.goo.gl/aqiq1PxXf3DJ9Y5j8"},
+    {name:"Montemaria Shrine",description:"Home of the massive Virgin Mary statue in Batangas City.",image:"montemaria_shrine.jpg",categories:["Heritage"],gmap_link:"https://maps.app.goo.gl/aqiq1PxXf3DJ9Y5j8"},
+    {name:"Padre Pio Shrine",description:"National shrine dedicated to St. Padre Pio in Sto. Tomas.",image:"padre_pio.jpg",categories:["Heritage"],gmap_link:"https://maps.app.goo.gl/ZNoKYByWNefrwzXy9"},
+    {name:"Fantasy World",description:"Colorful fairytale-like theme park in Lemery.",image:"fantasy_world.jpg",categories:["Heritage"],gmap_link:"https://maps.app.goo.gl/Z5xtwcWaDUGHpYbA7"},
+    {name:"Stilts Calatagan Beach Resort",description:"Maldives-style cottages on stilts.",image:"stilts.jpg",categories:["Nature","Leisure"],gmap_link:"https://maps.app.goo.gl/HCeM6epbF8qWon1Q8?g_st=ipc"},
+    {name:"Acuatico Beach Resort",description:"Luxury resort in Laiya.",image:"acuatico.jpg",categories:["Leisure"],gmap_link:"https://maps.app.goo.gl/ZebKn9wm1zxJ1qaAA"},
+    {name:"La Virginia Resort",description:"Theme-inspired resort in Mataas na Kahoy.",image:"la_virginia.jpg",categories:["Leisure"],gmap_link:"https://maps.app.goo.gl/fUiHd7tEGmW7kmpY6"},
+    {name:"TAGGO Grill & Resto",description:"Grill and Filipino-style dining in Batangas City.",image:"taggo.jpg",categories:["Food & Dining"],gmap_link:"https://maps.app.goo.gl/tqgaT1H5WioKvjT38"},
+    {name:"Cucina de Jardin",description:"Garden-style restaurant in Taal with scenic views.",image:"cucina_de_jardin.jpg",categories:["Food & Dining"],gmap_link:"https://maps.app.goo.gl/Gap6CJ26tzjSSkFy7"},
+    {name:"Prism Restaurant Cafe",description:"Cozy café overlooking Taal Lake.",image:"prism.jpg",categories:["Food & Dining"],gmap_link:"https://maps.app.goo.gl/TjunTnHBJGQNq31DA"},
+    {name:"Batangas Coffee, Grains & Pasalubong Center",description:"Coffee beans and local delicacies.",image:"batangas_coffee.jpg",categories:["Pasalubong"],gmap_link:"https://maps.app.goo.gl/Tg3FT6nQGAMPiu4g9"},
+    {name:"Babe’s Buko Pie",description:"Famous Malvar-made buko pies.",image:"babes_buko_pie.jpg",categories:["Pasalubong"],gmap_link:"https://maps.app.goo.gl/sg5p8aB32TABuEuu5"}
+];
+
+const grid = document.getElementById("attractionsGrid");
+
+attractionsList.forEach(place => {
+    const categoriesAttr = place.categories.map(cat =>
+        cat.toLowerCase().replaceAll(' ', '-')
+    ).join(" ");
+
+    const categoryLabels = place.categories.map(cat =>
+        `<span class="category-label ${cat.toLowerCase().replaceAll(/[\s&]/g,'-')}">${cat}</span>`
+    ).join("");
+
+
+    const card = document.createElement("a");
+    card.href = place.gmap_link;
+    card.target = "_blank";
+    card.className = "card-link";
+
+    card.innerHTML = `
+        <div class="card" data-categories="${categoriesAttr}">
+            <div class="card-image">
+                <img src="static/images/${place.image}" alt="${place.name}">
+                <div class="category-wrapper">
+                    ${categoryLabels}
+                </div>
+            </div>
+            <div class="card-content">
+                <h2>${place.name}</h2>
+                <p>${place.description}</p>
+            </div>
+        </div>
+    `;
+
+    grid.appendChild(card);
+});
+
+// ===== FILTER SCRIPT =====
+const filterButtons = document.querySelectorAll(".filter-btn");
+
+filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+        // Remove active state
+        filterButtons.forEach(btn => btn.classList.remove("active"));
+        button.classList.add("active");
+
+        const filterValue = button.dataset.filter.toLowerCase();
+
+        const cards = document.querySelectorAll(".card");
+
+        cards.forEach(card => {
+            const cardCategories = card.dataset.categories.split(" ");
+            if (filterValue === "all" || cardCategories.includes(filterValue)) {
+                card.parentElement.style.display = "block";
+            } else {
+                card.parentElement.style.display = "none";
+            }
+        });
     });
-}
+});
 </script>
 
 <footer>© 2025 Batangas Tourism</footer>
 
 </body>
 </html>
-
-

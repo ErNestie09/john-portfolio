@@ -24,12 +24,12 @@ body {
     position: sticky;
     top: 0;
     z-index: 10;
-    height: 70px;      /* fixed height */
-    padding: 0 40px;   /* horizontal padding */
+    height: 70px;
+    padding: 0 40px;
 }
 
 .navbar * {
-    line-height: 70px; /* vertical centering for all items */
+    line-height: 70px;
 }
 
 .navbar .logo {
@@ -47,15 +47,10 @@ body {
 
 /* ========================================
    Home Page Navbar Animation
-   (Underline on Hover)
 ======================================== */
 .home-page .nav-links a {
     position: relative;
-    margin-left: 20px;
     padding: 5px 0;
-    text-decoration: none;
-    font-weight: 500;
-    color: #333;
 }
 
 .home-page .nav-links a:after {
@@ -74,11 +69,11 @@ body {
 }
 
 /* ========================================
-   Hero Section (Full View)
+   Hero Section
 ======================================== */
 .hero {
     position: relative;
-    height: 100vh; /* full viewport height */
+    height: 95vh;
     background: url("../images/hero.jpg") center/cover no-repeat;
 }
 
@@ -86,7 +81,8 @@ body {
     position: absolute;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.45);
+    background: rgba(0,0,0,0.55);
+
 }
 
 .hero-text {
@@ -100,7 +96,7 @@ body {
     animation: fadeInUp 1.5s ease forwards;
 }
 
-/* Hero Heading Styles */
+/* Hero Heading */
 .hero-text h1 {
     font-family: 'Playfair Display', serif;
     font-size: 60px;
@@ -108,26 +104,28 @@ body {
     margin: 0;
     letter-spacing: 2px;
     text-transform: uppercase;
+
     background: linear-gradient(45deg, #ff9800, #ff5722, #ffc107);
+
+    background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+
     text-shadow: 2px 2px 12px rgba(0,0,0,0.6);
 }
 
-/* Hero Paragraph Styles */
+/* Hero Paragraph */
 .hero-text p {
-    font-family: 'Roboto', sans-serif;
     font-size: 20px;
-    font-weight: 400;
     margin: 15px 0 25px 0;
     line-height: 1.6;
-    color: #fdfdfd;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+    color: #fdfdfd;         
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.6);
     font-style: italic;
     letter-spacing: 1px;
 }
 
-/* Hero Text Fade-in Animation */
+/* Fade Animation */
 @keyframes fadeInUp {
     0% {
         opacity: 0;
@@ -139,65 +137,62 @@ body {
     }
 }
 
-/* CTA Button (Hero Section) */
+/* CTA Button */
 .cta-btn {
-    background: linear-gradient(45deg, #ff9800, #ff5722);
-    padding: 10px 36px;     /* oval shape */
-    color: white;
-    text-decoration: none;
+    background: linear-gradient(45deg, #d35400, #c0392b); 
+    background: #ff9800;
+    color: #36454F;
+    padding: 10px 36px;
     border-radius: 50px;
-    font-size: 16px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.25);
+    text-decoration: none;
     transition: all 0.3s ease;
 }
 
 .cta-btn:hover {
+    background: linear-gradient(45deg, #c0392b, #d35400); /* hover gradient */
     transform: translateY(-2px);
     box-shadow: 0 8px 20px rgba(0,0,0,0.35);
-    background: linear-gradient(45deg, #ff5722, #ff9800);
 }
 
 
-/* --- History & Facts Section --- */
+/* ========================================
+   History Section
+======================================== */
 .history-section {
     padding: 60px 10%;
     background: #fff;
 }
 
-/* Container for each subsection */
 .history-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     gap: 40px;
-    margin-bottom: 80px;      /* more spacing between subsections */
-    opacity: 0;               /* start hidden for fade-in */
+    margin-bottom: 80px;
+    opacity: 0;
     transform: translateY(30px);
     transition: opacity 1s ease, transform 1s ease;
 }
 
-/* Reverse layout for alternating sections */
 .history-container.reverse {
     flex-direction: row-reverse;
 }
 
-/* Images in subsections */
 .history-image {
     flex: 1 1 400px;
 }
 
 .history-image img {
     width: 100%;
-    height: auto;
     border-radius: 12px;
     object-fit: cover;
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
 }
 
-/* Text content in subsections */
 .history-text {
     flex: 1 1 400px;
 }
@@ -212,46 +207,38 @@ body {
 .history-text p {
     font-size: 16px;
     line-height: 1.7;
-    color: #555;
-    text-align: justify; /* added justified alignment */
+    color: #444;
+    text-align: justify;
 }
 
 .history-text ul {
     font-size: 16px;
     line-height: 1.7;
-    color: #555;
-    margin-bottom: 15px;      /* spacing between paragraphs */
-}
-
-.history-text ul {
+    color: #444;
+    margin-bottom: 15px;
     padding-left: 20px;
 }
 
-/* Fade-in animation */
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
 }
 
-/* Responsive adjustments */
+/* Responsive */
 @media screen and (max-width: 900px) {
     .history-container,
     .history-container.reverse {
-        flex-direction: column;   /* stack vertically on smaller screens */
+        flex-direction: column;
         text-align: center;
     }
-    .history-image, .history-text {
-        flex: 1 1 100%;
-    }
+
     .history-text ul {
         padding-left: 0;
     }
 }
 
-
-
 /* ========================================
-   Grid Cards (Attractions Page)
+   Grid Cards
 ======================================== */
 .grid-container {
     display: grid;
@@ -265,7 +252,8 @@ body {
     border-radius: 12px;
     box-shadow: 0 6px 15px rgba(0,0,0,0.1);
     overflow: hidden;
-    transition: transform 0.3s, box-shadow 0.3s;
+    transition: 0.3s;
+    height: 350px;
 }
 
 .card:hover {
@@ -275,14 +263,12 @@ body {
 
 .card-image {
     position: relative;
-    overflow: visible;
 }
 
 .card-image img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    display: block;
 }
 
 .card-content {
@@ -297,52 +283,59 @@ body {
 
 .card-content p {
     font-size: 14px;
-    color: #555;
-    margin: 0;
+    color: #444;
 }
 
 .card-link {
     text-decoration: none;
     color: inherit;
     display: block;
+    cursor: pointer;
 }
+
+.card-link,
+.card-link * {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card-link:hover,
+.card-link:hover * {
+    text-decoration: none;
+}
+
 
 /* Category Labels */
 .category-label {
-    position: static;
-    background-color: #ff9800;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 12px;
+    font-weight: 600;      /* slightly bolder for readability */
     font-size: 12px;
-    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 12px;
     text-transform: uppercase;
-    display: inline-block;
+    color: #ffffff;        /* force pure white text */
 }
 
-/* Category Colors */
-.nature { background: #4CAF50; }
-.heritage { background: #795548; }
-.leisure { background: #3F51B5; }
-.food-and-dining { background: #FF5722; }
-.pasalubong { background: #9C27B0; }
+.nature { background: #388E3C; }
+.heritage { background: #5D4037; }
+.leisure { background: #303F9F; }
+.food---dining { background: #D84315; }
+.pasalubong { background: #7B1FA2; }
 
-/* Multiple labels container */
+/* Wrapper for labels inside cards */
 .category-wrapper {
     position: absolute;
     top: 10px;
     left: 10px;
     display: flex;
-    flex-wrap: wrap;
     gap: 6px;
-    z-index: 2;
 }
+
 
 /* ========================================
    Footer
 ======================================== */
 footer {
-    background: #222;
+    background: #1a1a1a;
     color: white;
     text-align: center;
     padding: 20px;
@@ -369,32 +362,43 @@ footer {
     transition: 0.3s;
 }
 
-.filter-btn:hover {
-    background: #ff9800;
-    color: white;
-}
-
+.filter-btn:hover,
 .filter-btn.active {
     background: #ff9800;
-    color: white;
+    color: #222;
 }
 
 /* ========================================
-   Destination Page Navbar (Back Button)
+   Back Button
 ======================================== */
 .destination-page .nav-links a.back-btn {
     background: #ff9800;
-    color: white;
+    color: #36454F;
     padding: 8px 18px;
     border-radius: 25px;
     font-weight: 600;
     text-decoration: none;
-    transition: all 0.3s ease;
+    transition: 0.3s;
 }
 
 .destination-page .nav-links a.back-btn:hover {
-    background: #e57f00;
+    background: #cf7600;
     transform: translateY(-2px);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
 }
 
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body.destination-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.page-wrapper {
+    flex: 1;  /* takes remaining space */
+    display: flex;
+    flex-direction: column;
+}

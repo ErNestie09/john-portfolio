@@ -1,104 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Batangas Tourism</title>
-    <link rel="stylesheet" href="static/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Batangas Tourist</title>
+
+<link rel="stylesheet" href="static/css/style.css">
 </head>
+
 <body class="home-page">
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="logo">Batangas Tourism</div>
-        <div class="nav-links">
-            <a href="index.html">Home</a>
-            <a href="#" onclick="scrollToHistory()">About</a>
-        </div>
-    </nav>
+<!-- Navigation -->
+<nav class="navbar">
+    <div class="logo">Travel Batangas</div>
 
-    <script>
-        function scrollToHistory() {
-            document.querySelector(".history-section").scrollIntoView({
-                behavior: "smooth"
-            });
-        }
-    </script>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="#history">About</a>
+    </div>
+</nav>
 
-    <!-- Hero Section -->
-    <header class="hero">
-        <div class="overlay"></div>
-        <div class="hero-text">
-            <h1>Discover Batangas</h1>
-            <p>Beaches, volcanoes, culture, history—everything in one province.</p>
-            <a href="attractions.html" class="cta-btn">View Destinations</a>
-        </div>
-    </header>
+<!-- Hero Section -->
+<header class="hero">
+    <div class="overlay"></div>
 
-    <!-- History & Culture Section -->
-    <section class="history-section">
+    <div class="hero-text">
+        <h1>Discover Batangas</h1>
+        <p>Beaches, volcanoes, culture, history—everything in one province.</p>
+        <a href="attractions.html" class="cta-btn">View Destinations</a>
+    </div>
+</header>
 
-        <!-- History -->
-        <div class="history-container fade-in">
-            <div class="history-image">
-                <img src="static/images/batangas_history.jpg" alt="History of Batangas">
-            </div>
-            <div class="history-text">
-                <h2>History of Batangas</h2>
-                <p>
-                    Batangas is one of the oldest provinces in the Philippines. Early civilizations thrived along waterways such as the Pansipit River. Archaeological finds—stone tools, ancient pottery, jade ornaments, and trade relics—show active contact with China and neighboring Asian cultures.
-                </p>
-                <p>
-                    The name <strong>“Batangas”</strong> comes from <em>batang</em>, meaning logs, abundant along the Calumpang River. Historically, the region was called <strong>“Kumintang”</strong>.
-                </p>
-            </div>
+<!-- History & Culture Section -->
+<section id="history" class="history-section">
+
+    <!-- HISTORY -->
+    <article class="history-container fade-in">
+
+        <div class="history-image">
+            <img src="static/images/batangas_history.jpg" alt="History of Batangas">
         </div>
 
-        <!-- Notable Figures -->
-        <div class="history-container fade-in reverse">
-            <div class="history-image">
-                <img src="static/images/batangas_figures.jpg" alt="Notable Batangueño Figures">
-            </div>
-            <div class="history-text">
-                <h2>Notable Figures</h2>
-                <ul>
-                    <li><strong>Apolinario Mabini</strong> – Brains of the Revolution</li>
-                    <li><strong>Marcela Agoncillo</strong> – Maker of the Philippine Flag</li>
-                    <li><strong>Miguel Malvar</strong> – Revolutionary General</li>
-                </ul>
-            </div>
+        <div class="history-text">
+            <h2>History of Batangas</h2>
+
+            <p>
+                Batangas is one of the oldest provinces in the Philippines. Early civilizations thrived along waterways such as the Pansipit River. Archaeological finds—stone tools, ancient pottery, jade ornaments, and trade relics—show active contact with China and neighboring Asian cultures.
+            </p>
+
+            <p>
+                The name <strong>Batangas</strong> comes from <em>batang</em>, meaning logs, abundant along the Calumpang River. Historically, the region was called <strong>Kumintang</strong>.
+            </p>
         </div>
 
-        <!-- Culture -->
-        <div class="history-container fade-in">
-            <div class="history-image">
-                <img src="static/images/batangas_culture.jpg" alt="Culture of Batangas">
-            </div>
-            <div class="history-text">
-                <h2>Culture & Trivia</h2>
-                <p>
-                    Batangas is home to Kapeng Barako, Kumintang traditions, and iconic natural landmarks such as Taal Volcano and Verde Island Passage—earning its reputation as the Land of the Brave.
-                </p>
-            </div>
+    </article>
+
+
+    <!-- NOTABLE FIGURES -->
+    <article class="history-container fade-in reverse">
+
+        <div class="history-image">
+            <img src="static/images/batangas_figures.jpg" alt="Notable Batangueño Figures">
         </div>
 
-    </section>
+        <div class="history-text">
+            <h2>Notable Figures</h2>
 
-    <!-- Fade-in Animation -->
-    <script>
-        const fadeElements = document.querySelectorAll('.fade-in');
+            <ul>
+                <li><strong>Apolinario Mabini</strong> – Brains of the Revolution</li>
+                <li><strong>Marcela Agoncillo</strong> – Maker of the Philippine Flag</li>
+                <li><strong>Miguel Malvar</strong> – Revolutionary General</li>
+            </ul>
 
-        const observer = new IntersectionObserver(entries => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
+        </div>
 
-        fadeElements.forEach(el => observer.observe(el));
-    </script>
+    </article>
 
-    <footer>© 2025 Batangas Tourism</footer>
+
+    <!-- CULTURE -->
+    <article class="history-container fade-in">
+
+        <div class="history-image">
+            <img src="static/images/batangas_culture.jpg" alt="Culture of Batangas">
+        </div>
+
+        <div class="history-text">
+            <h2>Culture & Trivia</h2>
+
+            <p>
+                Batangas is home to Kapeng Barako, Kumintang traditions, and iconic natural landmarks such as Taal Volcano and Verde Island Passage — earning its reputation as the Land of the Brave.
+            </p>
+
+        </div>
+
+    </article>
+
+</section>
+
+
+<footer>© 2025 Batangas Tourism</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+    const fadeElements = document.querySelectorAll('.fade-in');
+
+    const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            if(entry.isIntersecting){
+                entry.target.classList.add("visible");
+            }
+        });
+    }, {threshold:0.1});
+
+    fadeElements.forEach(el => observer.observe(el));
+
+});
+</script>
 
 </body>
 </html>
