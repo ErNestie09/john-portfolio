@@ -100,7 +100,8 @@ p {
   align-items: center;
   height: 100vh;
   gap: 40px;
-  padding: 0 64px;
+  padding: 0 120px;
+  
 }
 
 .hero-content {
@@ -196,7 +197,38 @@ p {
   display: grid;
   grid-template-columns: 360px 1fr;
   gap: 64px;
+  padding: 80px 130px;
 }
+
+.founder-text p {
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+/* FOUNDER HEADING → STATEMENT SPACING */
+.founder-text h2 {
+  margin-bottom: 12px;
+}
+
+/* Short intro stays left-aligned */
+.founder-text .statement {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+/* Long bio is justified */
+.founder-text .bio {
+  text-align: justify;
+  text-justify: inter-word;
+  margin-top: 0;
+}
+
+@media (max-width: 768px) {
+  .founder-text .bio {
+    text-align: left;
+  }
+}
+
 
 .links a {
   margin-right: 16px;
@@ -772,37 +804,6 @@ p {
 
   .stats div::after {
     display: none;
-  }
-}
-
-
-/* FOUNDER BIO ALIGNMENT */
-.founder-text p {
-  text-align: justify;
-  text-justify: inter-word;
-}
-
-/* FOUNDER HEADING → STATEMENT SPACING */
-.founder-text h2 {
-  margin-bottom: 12px;
-}
-
-/* Short intro stays left-aligned */
-.founder-text .statement {
-  text-align: left;
-  margin-bottom: 16px;
-}
-
-/* Long bio is justified */
-.founder-text .bio {
-  text-align: justify;
-  text-justify: inter-word;
-  margin-top: 0;
-}
-
-@media (max-width: 768px) {
-  .founder-text .bio {
-    text-align: left;
   }
 }
 
