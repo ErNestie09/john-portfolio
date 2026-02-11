@@ -1132,6 +1132,7 @@ section p {
 .contact-collab {
   padding: 120px 64px 100px;
   align-items: flex-start;
+  padding-bottom: 30px;
 }
 
 /* Push image up slightly */
@@ -1162,12 +1163,13 @@ section p {
 
 /* Labels */
 .contact-collab .direct p {
-  margin-bottom: 6px;
+  margin-bottom: 5px;
   font-size: 12px;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--muted);
 }
+
 
 /* Collaboration list */
 .collab-list {
@@ -1488,4 +1490,54 @@ html {
 }
 
 
+.collab-social-container {
+  display: flex;
+  gap: 70px;
+  align-items: flex-start;
+  margin-top: 40px;
+}
 
+/* Collab stays natural */
+.collab-block {
+  max-width: 500px;
+}
+
+/* 👇 This is the key fix */
+.social-block {
+  margin-top: 0; /* force top alignment with title */
+  padding-top: 0;
+}
+
+/* Social icons */
+.socials {
+  display: flex;
+  gap: 18px;
+  margin-top: 10px;
+}
+
+.socials a {
+  font-size: 22px;
+  color: #A1A1AA;
+  transition: 0.3s ease;
+}
+
+.socials a:hover {
+  color: white;
+  transform: translateY(-3px);
+}
+
+.collab-block,
+.social-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+
+/* Mobile stacking */
+@media (max-width: 768px) {
+  .collab-social-container {
+    flex-direction: column;
+    gap: 30px;
+  }
+}
